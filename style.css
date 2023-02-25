@@ -1,102 +1,184 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-title {
-	font-size: large;
-}
+/* Global styles */
 body {
 	font-family: Arial, sans-serif;
+	margin: 0;
+	background: url(phoos.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	justify-content: center;
+	height: vh;
 }
 
+h1 {
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	margin: 0;
+	display: block;
+	font-size: 30px;
+	margin-top: 57px;
+}
+
+h2 {
+	background-color: #fff;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/* Header styles */
 header {
-	background-color: #790505;
 	color: #fff;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
 	padding: 20px;
 }
 
-header h1 {
-	margin-right: auto;
-}
-
 nav ul {
-	list-style: none;
 	display: flex;
 	flex-direction: row;
-	margin-left: auto;
+	justify-content: flex-end;
 }
 
-nav ul li {
+nav li {
 	margin: 0 10px;
 }
 
-nav ul li a {
+nav a {
 	color: #fff;
 	text-decoration: none;
+	font-size: 18px;
+ 	font-family: ui-monos ;}
+
+nav a:hover {
+	color: #ffffff;
 }
 
-.hero-section {
-	background-image: url("https://images.unsplash.com/photo-1546967191-fdfb13ed6b1e");
-	background-position: center;
-	background-size: cover;
-	color: #fff;
-	padding: 100px;
-	text-align: center;
-}
-
-.hero-section h2 {
-	font-size: 50px;
-	margin-bottom: 30px;
-}
-
-.hero-section p {
-	font-size: 20px;
-}
-
-.movie-section {
+/* Movies styles */
+#movies {
+	background-color:#1D2B64 ,#F8CDDA ;
 	padding: 50px;
 }
 
-.movie-list {
+.movies-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 30px;
+	box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+	padding: 20px;
+	margin-bottom: 30px;
+
 }
 
-.movie {
-	width: 300px;
-	margin: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
-	overflow: hidden;
-}
+
+
+.mo
 
 .movie img {
 	width: 100%;
 	height: auto;
-}
-
-.movie .details {
-	padding: 20px;
-}
-
-.movie h3 {
-	font-size: 24px;
 	margin-bottom: 10px;
 }
 
-.movie p {
-	font-size: 16px;
-	margin-bottom: 20px;
+.movie h3 {
+	margin-top: 0;
 }
 
-footer {
-	background-color: #333;
-	color: #fff;
+.movie p {
+	margin: 10px 0;
+}
+
+.movie ul {
+	margin: 0;
+	padding: 0;
+}
+
+.movie li {
+	margin: 5px 0;
+}
+
+/* Theaters styles */
+#theaters {
+	/* background-color: #ffffff; */
+	padding: 50px;
+}
+
+.theaters-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+
+.theater {
+	/*background-color: #fff; */
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2); /* Изменение цвета тени*/
 	padding: 20px;
-	text-align: center;
+	margin-bottom: 10px;
+}
+
+.theater h3 {
+	margin-top: 0;
+}
+
+.theater p {
+	margin: 10px 0;
+}
+
+/* Tickets styles */
+#tickets {
+	/*background-color: #ffffff;*/
+	padding: 50px;
+}
+
+/* #contact {
+	background-color: #400202;
+	padding: 40px;
+} */
+
+#movie-select {
+	padding: 10px;
+	margin-right: 10px;
+}
+
+#showtime-select {
+	padding: 10px;
+	margin-right: 10px;
+}
+
+#quantity-input {
+	padding: 10px;
+	margin-right: 10px;
+}
+
+#purchase-button {
+	padding: 10px;
+	background-color: #ffffff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#purchase-button:hover {
+	background-color: #ffffff;
+}
+
+
+/*for desktop */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
+}
+/*for mobile  */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
 }
