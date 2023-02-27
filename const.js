@@ -9,7 +9,7 @@ const movies = [
 	{
 	  title: "Social Network",
 	  year: 2010,
-	  genre: "Action,Spy,Thriller",
+	  genre: "Action,Spy",
 	  image: "https://images.unsplash.com/photo-1619463703047-5c4a4ab1b202",
 	},
 	{
@@ -37,18 +37,25 @@ for (let x = 0; x < images.length; x++) {
 }
 
 function getObject(title,year,genre,image) {
-	let obejct = {
+	return object = {
 		 title: title,
 		year: year,
 		genre: genre,
-		image: image,
-
 	}
-	return Object;
-
+	return object;
 }
-let object=getObject('Mr.Robot','2015','dramma','https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rottentomatoes.com%2Ftv%2Fmr_robot&psig=AOvVaw0HV5R8fWwThE0yPcYV5sbC&ust=1677383528138000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOiAg93ir_0CFQAAAAAdAAAAABAE');
-const Aza=document.getElementById("movies")
+
+/*let object=getObject('Mr.Robot','2015','dramma');
+const Aza=document.getElementById("movies") */
+
+function getObjectArr() {
+	const movies = [
+		getObject("Mr.Robot ", 2015 ," Action-Drama"),
+		getObject("Social Network", 2010 , "Spy-Action"),
+		getObject("Smowden", 2016 , "Boigraphic-Drama"),
+	]
+	return movies;
+}
 
 
 let userName = 'Azat';
@@ -59,15 +66,15 @@ function showMessage () {
 showMessage ();
 
 
-let azaHTML="";
+let cinema="";
 object.forEach(moviie=>{
-	azaHTML+=`
+	cinema+=`
        <div class="movie">
 			<img src="${movie.image}">
 	   </div>
 	`;
 });
-Aza.innerHTML=azaHTML;
+movie.innerHTML=cinema;
 
 	// <![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {
